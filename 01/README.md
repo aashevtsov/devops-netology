@@ -1,2 +1,10 @@
 Домашнее задание к занятию «1.1. Введение в DevOps»
+
 Задание №1
+![json](https://user-images.githubusercontent.com/77498640/139213076-b7111175-d874-42c9-b481-77337e1fb757.JPG)
+![md](https://user-images.githubusercontent.com/77498640/139213079-401c4d48-d261-4304-a332-06b31fdc9ad9.JPG)
+![sh](https://user-images.githubusercontent.com/77498640/139213082-2586b670-97fb-4fc2-88e1-78b4c79d166c.JPG)
+![tf](https://user-images.githubusercontent.com/77498640/139213084-cef65b85-2348-4320-82b3-e7f8662321d4.JPG)
+![yaml](https://user-images.githubusercontent.com/77498640/139213088-f9e88384-1ef8-4de7-8510-e6701eccf32c.JPG)
+
+Задание №2 - Описание жизненного цикла задачи (разработки нового функционала)
