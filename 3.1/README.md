@@ -19,15 +19,15 @@ ignoredups — заставляет игнорировать дубликаты 
 * проверяет условие у -d /tmp и возвращает ее статус (0 или 1), наличие катаолга /tmp <br />
 
 12. Основываясь на знаниях о просмотре текущих (например, PATH) и установке новых переменных; командах, которые мы рассматривали, 
-добейтесь в выводе type -a bash в виртуальной машине наличия первым пунктом в списке:<br /><br />
+добейтесь в выводе type -a bash в виртуальной машине наличия первым пунктом в списке:<br />
 
-vagrant@vagrant:~$ mkdir /tmp/new_path_dir/ <br />
-vagrant@vagrant:~$ cp /bin/bash /tmp/new_path_dir/ <br />
-vagrant@vagrant:~$ type -a bash <br />
+mkdir /tmp/new_path_dir/ <br />
+cp /bin/bash /tmp/new_path_dir/ <br />
+type -a bash <br />
 bash is /usr/bin/bash <br />
 bash is /bin/bash <br />
-vagrant@vagrant:~$ PATH=/tmp/new_path_dir/:$PATH <br />
-vagrant@vagrant:~$ type -a bash <br />
+PATH=/tmp/new_path_dir/:$PATH <br />
+type -a bash <br />
 bash is /tmp/new_path_dir/bash <br />
 bash is /usr/bin/bash <br />
 bash is /bin/bash <br />
