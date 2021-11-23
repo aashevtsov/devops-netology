@@ -4,7 +4,7 @@
 Если спользовать внешний вызов, то он будет работать со своим окружением, и менять  текущий каталог внутри своего окружения, а на вызвовший shell влиять не будет.
 
 2. 
-vagrant@vagrant:~$ cat tst_bash<br>
+vagrant@vagrant:$ cat tst_bash<br>
 if [[ -d /tmp ]];<br>
 test<br>
 test<br>
