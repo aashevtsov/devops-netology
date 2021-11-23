@@ -26,38 +26,38 @@ systemd(1)─┬─VBoxService(753)─┬─{VBoxService}(754)<br>
            
 4.
 pts/0:<br>
-vagrant@vagrant:~$ ls -l \root 2>/dev/pts/1<br>
-vagrant@vagrant:~$ <br>    
+vagrant@vagrant:\~$ ls -l \root 2>/dev/pts/1<br>
+vagrant@vagrant:\~$ <br>    
 
 Вывод в другой сессии pts/1:    <br>
 
-vagrant@vagrant:~$ who<br>
+vagrant@vagrant:\~$ who<br>
 vagrant  pts/0        2021-11-23 18:58 (192.168.30.30)<br>
 vagrant  pts/1        2021-11-23 18:59 (192.168.30.30)<br>
-vagrant@vagrant:~$ ls: cannot access 'root': No such file or directory<br>
+vagrant@vagrant:\~$ ls: cannot access 'root': No such file or directory<br>
 
 5.
-vagrant@vagrant:~$ cat test<br>
+vagrant@vagrant:\~$ cat test<br>
 if [[ -d /tmp ]];<br>
 test<br>
 test<br>
 123<br>
-vagrant@vagrant:~$ cat test_out<br>
+vagrant@vagrant:\~$ cat test_out<br>
 cat: tst_bash_out: No such file or directory <br>
-vagrant@vagrant:~$ cat <test >test_out<br>
-vagrant@vagrant:~$ cat tst_bash_out<br>
+vagrant@vagrant:\~$ cat <test >test_out<br>
+vagrant@vagrant:\~$ cat tst_bash_out<br>
 if [[ -d /tmp ]];<br>
 test<br>
 test<br>
 123<br>
-vagrant@vagrant:~$<br>
+vagrant@vagrant:\~$<br>
    
 6.
 Вывести полуится при использовании перенаправлении вывода:<br>
-    15:04:58 shev@MyPC(0):~/vagrant$ tty<br>
+    15:04:58 shev@MyPC(0):\~/vagrant$ tty<br>
     /dev/pts/3<br>
-    15:05:45 shev@MyPC(0):~/vagrant$ echo Hello from pts3 to tty3 >/dev/tty3<br>
-    15:06:19 shev@MyPC(0):~/vagrant$ <br>
+    15:05:45 shev@MyPC(0):\~/vagrant$ echo Hello from pts3 to tty3 >/dev/tty3<br>
+    15:06:19 shev@MyPC(0):\~/vagrant$ <br>
 <br>
 наблюдать в графическом режиме не получиться, нужно переключиться в контекст TTY <br>
 
@@ -66,17 +66,17 @@ bash 5>&1 - Создаст дескриптор с 5 и перенатправи
 echo netology > /proc/$$/fd/5 - выведет в дескриптор "5", который был пернеаправлен в stdout<br>
 если запустить echo netology > /proc/$$/fd/5 в новой сесии, получим ошибку, так как такого дескриптора нет на данный момент в текущей(новой) сесии<br>
     
-vagrant@vagrant:~$ echo netology > /proc/$$/fd/5<br>
+vagrant@vagrant:\~$ echo netology > /proc/$$/fd/5<br>
 -bash: /proc/1096/fd/5: No such file or directory<br>
-vagrant@vagrant:~$ bash 5>&1<br>
-vagrant@vagrant:~$ echo netology > /proc.$$/fd/5<br>
+vagrant@vagrant:\~$ bash 5>&1<br>
+vagrant@vagrant:\~$ echo netology > /proc.$$/fd/5<br>
 bash: /proc.1114/fd/5: No such file or directory<br>
-vagrant@vagrant:~$ echo netology > /proc/$$/fd/5<br>
+vagrant@vagrant:\~$ echo netology > /proc/$$/fd/5<br>
 netology<br>
-vagrant@vagrant:~$<br>
+vagrant@vagrant:\~$<br>
 
 8.
-vagrant@vagrant:~$ ls -l /root 9>&2 2>&1 1>&9 | grep denied -c <br>
+vagrant@vagrant:\~$ ls -l /root 9>&2 2>&1 1>&9 | grep denied -c <br>
 1<br>
 
 9>&2 - новый дескриптор перенаправили в stderr<br>
