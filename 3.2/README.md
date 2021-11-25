@@ -97,4 +97,17 @@ cat выведет содержимое запущенного файла, <br>
 
 11.
 SSE 4.2<br>
+           
+12.
+vagrant@vagrant:~$ ssh -t localhost 'tty'<br>
+vagrant@localhost's password: <br>
+/dev/pts/2<br>
+Connection to localhost closed.<br>
+vagrant@vagrant:\~$
+           
+ 14.
+ tee делает вывод одновременно и в файл, указаный в качестве параметра, и в stdout, <br>
+команда получает вывод из stdin, перенаправленный через pipe от stdout команды echo<br>
+и так как команда запущена от sudo , значит имеет права на запись в файл<br>
+ 
 
