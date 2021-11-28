@@ -64,10 +64,10 @@ Network(для каждого активного адаптера):<br>
 Netdata установил, пробросил на  порт 9999, так как 19999 - занял  хосте  локальной neetdata <br><br>
 
 информация с хоста:<br>
-20:11:25 shev@MyPC:~/vagrant$ sudo lsof -i :19999<br>
+20:11:25 shev@MyPC:\~/vagrant$ sudo lsof -i :19999<br>
 COMMAND   PID    USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME<br>
 netdata 50358 netdata    4u  IPv4 1003958      0t0  TCP localhost:19999 (LISTEN)<br>
-20:11:29 shev@MyPC:~/vagrant$ sudo lsof -i :9999<br>
+20:11:29 shev@MyPC:\~/vagrant$ sudo lsof -i :9999<br>
 COMMAND     PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME<br>
 chrome     4089 shev   80u  IPv4 1112886      0t0  TCP localhost:38598->localhost:9999 (ESTABLISHED)<br>
 VBoxHeadl 52075 shev   21u  IPv4 1053297      0t0  TCP *:9999 (LISTEN)<br>
