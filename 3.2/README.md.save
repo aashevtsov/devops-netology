@@ -1,0 +1,59 @@
+1. Это команда встройенная.
+   Внвстроенная, потому что, работать внутри сессии терминала логичнее менять указатель на текущую дерикторию внутренней функцией, 
+   Если спользовать внешний вызов, то он будет работать со своим окружением, и менять  текущий каталог внутри своего окружения, а на вызвовший shell влиять не будет.  
+2.
+vagrant@vagrant:~$ cat test
+if [[ -d /tmp ]];
+test
+test
+123
+vagrant@vagrant:~$ grep 123 test -c
+1
+vagrant@vagrant:~$ grep 123 test |wc -l
+1
+
+3. 
+на моей машине
+systemd(1)─┬─ModemManager(1179)─┬─{ModemManager}(1232)
+           │                    └─{ModemManager}(1236)
+На виртуальной
+vagrant@vagrant:~$ pstree -p
+systemd(1)─┬─VBoxService(753)─┬─{VBoxService}(754)
+           │                  ├─{VBoxService}(755)
+           │                  ├─{VBoxService}(756)
+4.
+pts/0:
+vagrant@vagrant:~$ ls -l \root 2>/dev/pts/1
+vagrant@vagrant:~$ 
+    
+
+Вывод в другой сессии pts/1:    
+
+vagrant@vagrant:~$ who
+vagrant  pts/0        2021-11-23 18:58 (192.168.30.30)
+vagrant  pts/1        2021-11-23 18:59 (192.168.30.30)
+vagrant@vagrant:~$ ls: cannot access 'root': No such file or directory
+
+5.
+agrant@vagrant:~$ cat test
+if [[ -d /tmp ]];
+test
+test
+123
+agrant@vagrant:~$ cat tst_bash
+if [[ -d /tmp ]];
+sdgsdfgfd
+sdgsdfgfghdgfd
+123
+vagrant@vagrant:~$ cat tst_bash >tst_bash_out
+vagrant@vagrant:~$ cat tst_bash_out
+if [[ -d /tmp ]];
+sdgsdfgfd
+sdgsdfgfghdgfd
+123
+vagrant@vagrant:~$ cat test >test_out
+vagrant@vagrant:~$ cat test_out
+if [[ -d /tmp ]];
+test
+test
+123
