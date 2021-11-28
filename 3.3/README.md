@@ -5,8 +5,8 @@ CD -> chdir("/tmp")<br>
 Файл базы типов - /usr/share/misc/magic.mgc<br>
 
 3.
-vagrant@vagrant\:~$ lsof -p 1126<br>
-...
+vagrant@vagrant:\~$ lsof -p 1126<br>
+
 vi      1126 vagrant    4u   REG  253,0    12288  526898 /home/vagrant/.tst_bash.swp (deleted)<br>
 
 vagrant@vagrant:\~$ echo '' >/proc/1126/fd/4<br>
