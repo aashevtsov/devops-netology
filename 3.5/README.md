@@ -177,8 +177,8 @@ Creating journal (1024 blocks): done<br>
 Writing superblocks and filesystem accounting information: done<br>
 
 12.
-root@vagrant:~# mkdir /tmp/new<br>
-root@vagrant:~# mount /dev/vg1/lvol0 /tmp/new<br>
+root@vagrant:\~# mkdir /tmp/new<br>
+root@vagrant:\~# mount /dev/vg1/lvol0 /tmp/new<br>
 
 13.
 root@vagrant:~# wget https://mirror.yandex.ru/ubuntu/ls-lR.gz -O /tmp/new/test.gz<br>
