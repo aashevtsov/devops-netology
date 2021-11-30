@@ -12,7 +12,7 @@ vi      1126 vagrant    4u   REG  253,0    12288  526898 /home/vagrant/.tst_bash
 vagrant@vagrant:\~$ echo '' >/proc/1126/fd/4<br>
 
 
-1126 - PID процесса vi<br>
+1126 - PID процесса vi
 4 - дескриптор файла<br>
 
 4.
