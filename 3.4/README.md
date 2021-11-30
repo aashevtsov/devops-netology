@@ -100,6 +100,16 @@ root@vagrant:/# ps<br>
     PID TTY          TIME CMD<br>
       2 pts/0    00:00:00 bash<br>
      11 pts/0    00:00:00 ps<br><br>
+     
+NS          TYPE   NPROCS PID USER COMMAND<br>
+4026531835 cgroup      1   1 root sleep 1h<br>
+4026531837 user        1   1 root sleep 1h<br>
+4026531838 uts         1   1 root sleep 1h<br>
+4026531839 ipc         1   1 root sleep 1h<br>
+4026532008 net         1   1 root sleep 1h<br>
+4026532764 mnt         1   1 root sleep 1h<br>
+4026532765 pid         1   1 root sleep 1h<br>
+
 
 7.
 это функция внутри "{}", с именем ":" , которая после опредения в строке запускает саму себя.<br>
