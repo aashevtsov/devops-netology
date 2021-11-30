@@ -168,131 +168,131 @@ root@vagrant:\~# lvs<br>
 
 11.
 root@vagrant:\~# mkfs.ext4 /dev/vg1/lvol0<br>
-mke2fs 1.45.5 (07-Jan-2020)
-Creating filesystem with 25600 4k blocks and 25600 inodes
+mke2fs 1.45.5 (07-Jan-2020)<br>
+Creating filesystem with 25600 4k blocks and 25600 inodes<br><br>
 
-Allocating group tables: done                            
-Writing inode tables: done                            
-Creating journal (1024 blocks): done
-Writing superblocks and filesystem accounting information: done
+Allocating group tables: done                         <br>   
+Writing inode tables: done                            <br>
+Creating journal (1024 blocks): done<br>
+Writing superblocks and filesystem accounting information: done<br>
 
 12.
-root@vagrant:~# mkdir /tmp/new
-root@vagrant:~# mount /dev/vg1/lvol0 /tmp/new
+root@vagrant:~# mkdir /tmp/new<br>
+root@vagrant:~# mount /dev/vg1/lvol0 /tmp/new<br>
 
 13.
-root@vagrant:~# wget https://mirror.yandex.ru/ubuntu/ls-lR.gz -O /tmp/new/test.gz
---2021-11-30 12:50:09--  https://mirror.yandex.ru/ubuntu/ls-lR.gz
-Resolving mirror.yandex.ru (mirror.yandex.ru)... 213.180.204.183, 2a02:6b8::183
-Connecting to mirror.yandex.ru (mirror.yandex.ru)|213.180.204.183|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 20488555 (20M) [application/octet-stream]
-Saving to: ‘/tmp/new/test.gz’
+root@vagrant:~# wget https://mirror.yandex.ru/ubuntu/ls-lR.gz -O /tmp/new/test.gz<br>
+--2021-11-30 12:50:09--  https://mirror.yandex.ru/ubuntu/ls-lR.gz<br>
+Resolving mirror.yandex.ru (mirror.yandex.ru)... 213.180.204.183, 2a02:6b8::183<br>
+Connecting to mirror.yandex.ru (mirror.yandex.ru)|213.180.204.183|:443... connected.<br>
+HTTP request sent, awaiting response... 200 OK<br>
+Length: 20488555 (20M) [application/octet-stream]<br>
+Saving to: ‘/tmp/new/test.gz’<br>
 
-/tmp/new/test.gz     100%[=====================>]  19.54M  6.65MB/s    in 2.9s    
+/tmp/new/test.gz     100%[=====================>]  19.54M  6.65MB/s    in 2.9s    <br>
 
-2021-11-30 12:50:12 (6.65 MB/s) - ‘/tmp/new/test.gz’ saved [20488555/20488555]
+2021-11-30 12:50:12 (6.65 MB/s) - ‘/tmp/new/test.gz’ saved [20488555/20488555]<br>
 
-root@vagrant:~# ls -l /tmp/new
-total 20012
--rw-r--r-- 1 root root 20488555 Nov 30 12:15 test.gz
-root@vagrant:~#
+root@vagrant:\~# ls -l /tmp/new<br>
+total 20012<br>
+-rw-r--r-- 1 root root 20488555 Nov 30 12:15 test.gz<br>
+root@vagrant:\~#<br>
 
 14.
-root@vagrant:~# lsblk
-NAME                 MAJ:MIN RM  SIZE RO TYPE  MOUNTPOINT
-sda                    8:0    0   64G  0 disk  
-├─sda1                 8:1    0  512M  0 part  /boot/efi
-├─sda2                 8:2    0    1K  0 part  
-└─sda5                 8:5    0 63.5G  0 part  
-  ├─vgvagrant-root   253:0    0 62.6G  0 lvm   /
-  └─vgvagrant-swap_1 253:1    0  980M  0 lvm   [SWAP]
-sdb                    8:16   0  2.5G  0 disk  
-├─sdb1                 8:17   0    2G  0 part  
-│ └─md1                9:1    0    2G  0 raid1 
-└─sdb2                 8:18   0  511M  0 part  
-  └─md0                9:0    0  510M  0 raid1 
-    └─vg1-lvol0      253:2    0  100M  0 lvm   /tmp/new
-sdc                    8:32   0  2.5G  0 disk  
-├─sdc1                 8:33   0    2G  0 part  
-│ └─md1                9:1    0    2G  0 raid1 
-└─sdc2                 8:34   0  511M  0 part  
-  └─md0                9:0    0  510M  0 raid1 
-    └─vg1-lvol0      253:2    0  100M  0 lvm   /tmp/new
+root@vagrant:\~# lsblk<br>
+NAME                 MAJ:MIN RM  SIZE RO TYPE  MOUNTPOINT<br>
+sda                    8:0    0   64G  0 disk  <br>
+├─sda1                 8:1    0  512M  0 part  /boot/efi<br>
+├─sda2                 8:2    0    1K  0 part  <br>
+└─sda5                 8:5    0 63.5G  0 part  <br>
+  ├─vgvagrant-root   253:0    0 62.6G  0 lvm   /<br>
+  └─vgvagrant-swap_1 253:1    0  980M  0 lvm   [SWAP]<br>
+sdb                    8:16   0  2.5G  0 disk  <br>
+├─sdb1                 8:17   0    2G  0 part  <br>
+│ └─md1                9:1    0    2G  0 raid1 <br>
+└─sdb2                 8:18   0  511M  0 part  <br>
+  └─md0                9:0    0  510M  0 raid1 <br>
+    └─vg1-lvol0      253:2    0  100M  0 lvm   /tmp/new<br>
+sdc                    8:32   0  2.5G  0 disk  <br>
+├─sdc1                 8:33   0    2G  0 part  <br>
+│ └─md1                9:1    0    2G  0 raid1 <br>
+└─sdc2                 8:34   0  511M  0 part  <br>
+  └─md0                9:0    0  510M  0 raid1 <br>
+    └─vg1-lvol0      253:2    0  100M  0 lvm   /tmp/new<br>
 
 15.
-root@vagrant:~# gzip -t /tmp/new/test.gz && echo $?
-0
+root@vagrant:~# gzip -t /tmp/new/test.gz && echo $?<br>
+0<br>
 
 16.
-root@vagrant:~# pvmove /dev/md0
-  /dev/md0: Moved: 12.00%
-  /dev/md0: Moved: 100.00%
-root@vagrant:~# lsblk
-NAME                 MAJ:MIN RM  SIZE RO TYPE  MOUNTPOINT
-sda                    8:0    0   64G  0 disk  
-├─sda1                 8:1    0  512M  0 part  /boot/efi
-├─sda2                 8:2    0    1K  0 part  
-└─sda5                 8:5    0 63.5G  0 part  
-  ├─vgvagrant-root   253:0    0 62.6G  0 lvm   /
-  └─vgvagrant-swap_1 253:1    0  980M  0 lvm   [SWAP]
-sdb                    8:16   0  2.5G  0 disk  
-├─sdb1                 8:17   0    2G  0 part  
-│ └─md1                9:1    0    2G  0 raid1 
-│   └─vg1-lvol0      253:2    0  100M  0 lvm   /tmp/new
-└─sdb2                 8:18   0  511M  0 part  
-  └─md0                9:0    0  510M  0 raid1 
-sdc                    8:32   0  2.5G  0 disk  
-├─sdc1                 8:33   0    2G  0 part  
-│ └─md1                9:1    0    2G  0 raid1 
-│   └─vg1-lvol0      253:2    0  100M  0 lvm   /tmp/new
-└─sdc2                 8:34   0  511M  0 part  
-  └─md0                9:0    0  510M  0 raid1 
-root@vagrant:~#
+root@vagrant:\~# pvmove /dev/md0<br>
+  /dev/md0: Moved: 12.00%<br>
+  /dev/md0: Moved: 100.00%<br>
+root@vagrant:~# lsblk<br>
+NAME                 MAJ:MIN RM  SIZE RO TYPE  MOUNTPOINT<br>
+sda                    8:0    0   64G  0 disk  <br>
+├─sda1                 8:1    0  512M  0 part  /boot/efi<br>
+├─sda2                 8:2    0    1K  0 part  <br>
+└─sda5                 8:5    0 63.5G  0 part  <br>
+  ├─vgvagrant-root   253:0    0 62.6G  0 lvm   /<br>
+  └─vgvagrant-swap_1 253:1    0  980M  0 lvm   [SWAP]<br>
+sdb                    8:16   0  2.5G  0 disk  <br>
+├─sdb1                 8:17   0    2G  0 part  <br>
+│ └─md1                9:1    0    2G  0 raid1 <br>
+│   └─vg1-lvol0      253:2    0  100M  0 lvm   /tmp/new<br>
+└─sdb2                 8:18   0  511M  0 part  <br>
+  └─md0                9:0    0  510M  0 raid1 <br>
+sdc                    8:32   0  2.5G  0 disk  <br>
+├─sdc1                 8:33   0    2G  0 part  <br>
+│ └─md1                9:1    0    2G  0 raid1 <br>
+│   └─vg1-lvol0      253:2    0  100M  0 lvm   /tmp/new<br>
+└─sdc2                 8:34   0  511M  0 part  <br>
+  └─md0                9:0    0  510M  0 raid1 <br>
+root@vagrant:\~#<br>
 
 17.
 
-root@vagrant:~# mdadm /dev/md1 --fail /dev/sdb1
-mdadm: set /dev/sdb1 faulty in /dev/md1
+root@vagrant:\~# mdadm /dev/md1 --fail /dev/sdb1<br>
+mdadm: set /dev/sdb1 faulty in /dev/md1<br>
 
-root@vagrant:~# mdadm -D /dev/md1
-/dev/md1:
-           Version : 1.2
-*******
-Consistency Policy : resync
+root@vagrant:~# mdadm -D /dev/md1<br>
+/dev/md1:<br>
+           Version : 1.2<br>
+*******<br>
+Consistency Policy : resync<br>
 
-              Name : vagrant:1  (local to host vagrant)
-              UUID : 1aac0a29:
-root@vagrant:~# mdadm -D /dev/md1
-/dev/md1:
-           Version : 1.2
-0fa0dc73:082e1042:fe00b376
-            Events : 19
+              Name : vagrant:1  (local to host vagrant)<br>
+              UUID : 1aac0a29:<br>
+root@vagrant:\~# mdadm -D /dev/md1<br>
+/dev/md1:<br>
+           Version : 1.2<br>
+0fa0dc73:082e1042:fe00b376<br>
+            Events : 19<br>
 
-    Number   Major   Minor   RaidDevice State
-       -       0        0        0      removed
-       1       8       33        1      active sync   /dev/sdc1
+    Number   Major   Minor   RaidDevice State<br>
+       -       0        0        0      removed<br>
+       1       8       33        1      active sync   /dev/sdc1<br>
 
-       0       8       17        -      faulty   /dev/sdb1
+       0       8       17        -      faulty   /dev/sdb1<br>
 
 18.
 
-root@vagrant:~# dmesg |grep md1
-[  480.422928] md/raid1:md1: not clean -- starting background reconstruction
-[  480.422930] md/raid1:md1: active with 2 out of 2 mirrors
-[  480.422945] md1: detected capacity change from 0 to 2144337920
-[  480.425781] md: resync of RAID array md1
-[  490.758344] md: md1: resync done.
-[ 2325.890719] md/raid1:md1: Disk failure on sdb1, disabling device.
-               md/raid1:md1: Operation continuing on 1 devices.
+root@vagrant:\~# dmesg |grep md1<br>
+[  480.422928] md/raid1:md1: not clean -- starting background reconstruction<br>
+[  480.422930] md/raid1:md1: active with 2 out of 2 mirrors<br>
+[  480.422945] md1: detected capacity change from 0 to 2144337920<br>
+[  480.425781] md: resync of RAID array md1<br>
+[  490.758344] md: md1: resync done.<br>
+[ 2325.890719] md/raid1:md1: Disk failure on sdb1, disabling device.<br>
+               md/raid1:md1: Operation continuing on 1 devices.<br>
 
 19.
-root@vagrant:~# gzip -t /tmp/new/test.gz && echo $?
+root@vagrant:\~# gzip -t /tmp/new/test.gz && echo $?<br>
 0
 
 20.
-Выполнено:
-15:13:33 alex@upc(0):~/vagrant$ vagrant destroy
-    default: Are you sure you want to destroy the 'default' VM? [y/N] y
-==> default: Forcing shutdown of VM...
-==> default: Destroying VM and associated drives..
+Выполнено:<br>
+15:13:33 alex@upc(0):~/vagrant$ vagrant destroy<br>
+    default: Are you sure you want to destroy the 'default' VM? [y/N] y<br>
+==> default: Forcing shutdown of VM...<br>
+==> default: Destroying VM and associated drives..<br>
