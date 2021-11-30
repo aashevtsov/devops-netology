@@ -153,7 +153,7 @@ root@vagrant:~# vgdisplay<br>
   Free  PE / Size       638 / 2.49 GiB<br>
   VG UUID               tojQnc-yOx3-L2uF-35cS-agip-bkwo-5Sz4ol<br>
 
-"10.
+10.
 root@vagrant:\~# lvcreate -L 100M vg1 /dev/md0<br>
   Logical volume "lvol0" created.<br>
 root@vagrant:~# vgs<br>
@@ -164,7 +164,7 @@ root@vagrant:\~# lvs<br>
   LV     VG        Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert<br>
   lvol0  vg1       -wi-a----- 100.00m                                                    <br>
   root   vgvagrant -wi-ao---- <62.54g                                                    <br>
-  swap_1 vgvagrant -wi-ao---- 980.00m"<br>
+  swap_1 vgvagrant -wi-ao---- 980.00m<br>
 
 11.
 root@vagrant:\~# mkfs.ext4 /dev/vg1/lvol0<br>
