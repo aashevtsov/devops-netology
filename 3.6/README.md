@@ -26,7 +26,7 @@ Set-Cookie: prov=7e39bdfd-5bf6-b40d-1d78-a29fb3aecbe7; domain=.stackoverflow.com
 
 Connection closed by foreign host.<br>
 
-Это заголовок страницы https://stackoverflow.com/questions<br>
+код 301, что означает, что на сайте установлена безусловная постоянная переадресация на https://stackoverflow.com/questions<br>
 
 2.
 Request URL: http://stackoverflow.com/<br>
