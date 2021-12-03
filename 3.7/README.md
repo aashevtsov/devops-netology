@@ -13,6 +13,7 @@ ipconfig
 Модуль VLAN
 
 Добавляем VLAN
+<br>
 `shev@MyPC:~$ nmcli con add type vlan con-name enp0s31f6.500 ifname VLAN500 id 500 dev enp0s31f6 ip4 10.10.10.10/24
 `
 <br>
