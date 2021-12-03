@@ -16,7 +16,7 @@ ipconfig
 `shev@MyPC:~$ nmcli con add type vlan con-name enp0s31f6.500 ifname VLAN500 id 500 dev enp0s31f6 ip4 10.10.10.10/24
 `
 Смотрим
-`
+```
 shev@MyPC:~$ nmcli con show 
 NAME                UUID                                  TYPE      DEVICE  
 GPN-WiFi            86f9411c-a5e8-40e5-a264-6a23b629f18c  wifi      wlp4s0  
@@ -32,7 +32,7 @@ VLAN500: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
         RX errors 0  dropped 0  overruns 0  frame 0
         TX packets 0  bytes 0 (0.0 B)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-`
+```
 
 4.
 
