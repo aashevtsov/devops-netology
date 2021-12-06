@@ -25,8 +25,8 @@ GPN-WiFi            86f9411c-a5e8-40e5-a264-6a23b629f18c  wifi      wlp4s0
 NGate VPN Tunnel    6de98eb6-07a5-4470-978b-d09d5df60120  tun       tun0    
 docker0             fa56697e-6d3a-4f60-b9d3-988cf3d7952d  bridge    docker0 
 enp0s31f6.500       96559ac6-c8e6-4707-aeaa-ebf1fd0ba728  vlan      --      
-`
-`
+```
+```
 shev@MyPC:~$ ifconfig
 VLAN500: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
         ether 8c:16:45:8f:9f:b8  txqueuelen 1000  (Ethernet)
@@ -37,6 +37,7 @@ VLAN500: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
 ```
 
 4.
+В Linux используется Bonding для объединения нескольких сетевых интерфейсов в один
 Типы агрегации
 ```
 Режим	Тип	         Описание и достижение Fail Tolerance и Balancing
