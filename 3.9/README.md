@@ -70,6 +70,7 @@ cd testssl.sh
 ./testssl.sh https://pikabu.ru/
 
 <details>
+
 ```
 ###########################################################
     testssl.sh       3.1dev from https://testssl.sh/dev/
@@ -362,7 +363,7 @@ TLSv1.3
                               Grade capped to B. TLS 1.0 offered
 
 ```
- </details> 
+</details> 
 
 5,6.
  ssh-keygen
