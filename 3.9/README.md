@@ -65,11 +65,12 @@ Syntax OK
 
 4.
 
-git clone --depth 1 https://github.com/drwetter/testssl.sh.git
-cd testssl.sh
-./testssl.sh https://pikabu.ru/
+git clone --depth 1 https://github.com/drwetter/testssl.sh.git<br>
+cd testssl.sh<br>
+./testssl.sh https://pikabu.ru/<br>
 
 <details>
+<summary>testssl.sh</summary>
 
 ```
 ###########################################################
