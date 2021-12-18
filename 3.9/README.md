@@ -366,9 +366,9 @@ TLSv1.3
 </details> 
 
 5,6.<br>
- ssh-keygen
- Копируетм ключ публичный id_rsa на удаленный сервер
- в папке ~/.ssh можно создать файл config, изменить порт подключения для безопасности 
+ ssh-keygen<br>
+ Копируетм ключ публичный id_rsa на удаленный сервер<br>
+ в папке ~/.ssh можно создать файл config, изменить порт подключения для безопасности<br> 
  ```
 Host *.*.*.*
 Port 2007
@@ -383,11 +383,11 @@ ssh *.*.*.*.
 ```
 
 7.
-sudo tcpdump -i wlp4s0 -c 100 not port 22 and not port 53 -w test.pcap
-tcpdump: listening on wlp4s0, link-type EN10MB (Ethernet), capture size 262144 bytes
-
-^C42 packets captured
-42 packets received by filter
-0 packets dropped by kernel
+sudo tcpdump -i wlp4s0 -c 100 not port 22 and not port 53 -w test.pcap<br>
+tcpdump: listening on wlp4s0, link-type EN10MB (Ethernet), capture size 262144 bytes<br>
+<br>
+^C42 packets captured<br>
+42 packets received by filter<br>
+0 packets dropped by kernel<br>
 
 ![].(8.png)
