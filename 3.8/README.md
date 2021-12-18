@@ -186,8 +186,17 @@ Paths: (22 available, best #22, table default)
 ```
 Статические маршруты
 ```
+ ip route show
+default via 192.168.31.1 dev wlp4s0 proto dhcp metric 600 
+10.50.40.111 via 10.126.0.1 dev tun0 proto static metric 450 linkdown 
+10.50.40.133 via 10.126.0.1 dev tun0 proto static metric 450 linkdown 
+10.62.48.244 via 10.126.0.1 dev tun0 proto static metric 450 linkdown 
+10.62.48.245 via 10.126.0.1 dev tun0 proto static metric 450 linkdown 
+10.126.0.0/16 dev tun0 proto kernel scope link src 10.126.80.4 metric 450 linkdown 
 22.2.2.0/30 dev dummy0 proto kernel scope link src 22.2.2.2 
 169.254.0.0/16 dev dummy0 scope link metric 1000 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 
+192.168.31.0/24 dev wlp4s0 proto kernel scope link src 192.168.31.9 metric 600 
 
 ```
 
