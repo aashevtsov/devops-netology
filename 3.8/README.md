@@ -1,5 +1,6 @@
 1.
-
+<details>
+  
 ```
 route-views>sh ip route 5.19.0.222
 Routing entry for 5.19.0.0/24
@@ -170,6 +171,25 @@ Paths: (22 available, best #22, table default)
       path 7FE16C9F8948 RPKI State not found
       rx pathid: 0, tx pathid: 0x0
 ```
+</details>
+
+2.
+
+Интрефейс
+```
+9: dummy0: <BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/ether 02:82:ee:11:70:b2 brd ff:ff:ff:ff:ff:ff
+    inet 22.2.2.2/30 brd 22.2.2.3 scope global dummy0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::82:eeff:fe11:70b2/64 scope link 
+       valid_lft forever preferred_lft forever
+```
+Статические маршруты
+```
+22.2.2.0/30 dev dummy0 proto kernel scope link src 22.2.2.2 
+169.254.0.0/16 dev dummy0 scope link metric 1000 
+
+```
 
 3.
 
@@ -208,3 +228,4 @@ UNCONN 0      0                 [::]:111            [::]:*     users:(("rpcbind"
 53 - локальный резолвер DNS, 68 - systemd-network, 111 - RPC
 
 5.
+![3.8](HW3.8.png)
