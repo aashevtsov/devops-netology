@@ -11,12 +11,12 @@
  При входе в плагин с нового устройства запрашивается OTP.
 
 3.
- Устанвливаю apache2
+ Устанвливаю apache2<br>
  Генерирую сертификат 
  ```
 sudo openssl req -new -x509 -days 1461 -nodes -out cert.pem -keyout cert.key -subj "/C=RU/ST=SPb/L=SPb/O=Global Security/OU=IT Department/CN=test.dmosk.local/CN=test"
 ```
- По ссылке https://ssl-config.mozilla.org/#server=apache&version=2.4.41&config=intermediate&openssl=1.1.1k&guideline=5.6 генерируем кусочек конфига и исправляем пути к сертификату и ключу.
+ По ссылке https://ssl-cionfig.mozilla.org/#server=apache&version=2.4.41&config=intermediate&openssl=1.1.1k&guideline=5.6 генерирую кусок конфига и исправляю пути к сертификату и ключу.
 ```
 # generated 2021-12-08, Mozilla Guideline v5.6, Apache 2.4.41, OpenSSL 1.1.1k, intermediate configuration
 # https://ssl-config.mozilla.org/#server=apache&version=2.4.41&config=intermediate&openssl=1.1.1k&guideline=5.6
@@ -362,9 +362,9 @@ TLSv1.3
                               Grade capped to B. TLS 1.0 offered
 
 ```
- </details><br>
+ </details> 
 
-5. 6.
+5,6.
  ssh-keygen
  Копируетм ключ публичный id_rsa на удаленный сервер
  в папке ~/.ssh можно создать файл config, изменить порт подключения для безопасности 
