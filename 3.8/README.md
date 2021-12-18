@@ -237,4 +237,4 @@ UNCONN 0      0                 [::]:111            [::]:*     users:(("rpcbind"
 53 - локальный резолвер DNS, 68 - systemd-network, 111 - RPC
 
 5.
-![3.8](HW3.8.jpg)
+![3.8](HW3.8.JPG)
