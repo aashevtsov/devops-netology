@@ -21,7 +21,7 @@ Rule added (v6)
 user@MyPC:~$ sudo ufw allow from 127.0.0.1
 Rule added
 ```
-
+```
 user@MyPC:~$ sudo ufw status verbose
 Status: active
 Logging: on (low)
@@ -35,7 +35,7 @@ To                         Action      From
 Anywhere                   ALLOW IN    127.0.0.1
 22/tcp (v6)                ALLOW IN    Anywhere (v6)
 443/tcp (v6)               ALLOW IN    Anywhere (v6)
-
+```
 3. Устанавливаем hashicorp vault по инструкции: Добавляем HashiCorp GPG key:
 ```
 user@MyPC:~$ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
