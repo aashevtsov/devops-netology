@@ -419,14 +419,14 @@ unix  3      [ ]         STREAM     CONNECTED     198284   71025/nginx: master
 Видим, что пока-что только 80 порт, то есть http. Далее мы перенастроим его на работу по https на порту 443.
 
 Временно откроем фаервол на пропуск входящих соединений на порт 80:
-``
+```
 user@MyPC:~$ sudo ufw allow 80/tcp
 Rule added
 Rule added (v6)
 ```
 На Компьютере с которого мы будем пробовать открывать веб на этом сервере пропишем запись в файл hosts: 10.20.8.78 test.example.com
 
-КАРТИНКА!!!!
+[1](img_1.png)
 Открывается по http yf порту 80.
 
 7. Перенастраиваем на 443 / https.
@@ -518,6 +518,7 @@ drwxr-xr-x 24 root  root  4096 Jan 13 00:32 ../
 -rw-r--r--  1 root  root  1679 Jan 13 00:57 test.example.com.key
 ```
 Проверяем, что nginx перезапустился сриптом в то же время:
+
 ```
 root@MyPC:/etc# systemctl status nginx
 ● nginx.service - A high performance web server and a reverse proxy server
