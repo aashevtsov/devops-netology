@@ -352,7 +352,7 @@ root@MyPC:~# vault write -format=json pki_int/issue/example-dot-com common_name=
 Поэтому будем использовать это, чтобы вывести сгенерированный сертификат и ключ в отдельные файлы.
 
 Cкрипт regenerate_certs.sh:
-```
+```bash
 #!/usr/bin/env bash
 
 export VAULT_ADDR=http://127.0.0.1:8200
@@ -427,10 +427,11 @@ Rule added (v6)
 На Компьютере с которого мы будем пробовать открывать веб на этом сервере пропишем запись в файл hosts: 10.20.8.78 test.example.com
 
 ![1](img_1.png)
-Открывается по http yf порту 80.
+
+Открывается по http через 80й порт.
 
 7. Перенастраиваем на 443 / https.
-Открываем конфиг /etc/nginx/nginx.conf и в разделе http вписываем настройку сервера, указывая пути к файлу сертификата и ключа:
+Открываем конфиг ```/etc/nginx/nginx.conf``` и в разделе http вписываем настройку сервера, указывая пути к файлу сертификата и ключа:
 ```
 server {
     listen              443 ssl;
@@ -454,6 +455,7 @@ unix  3      [ ]         STREAM     CONNECTED     682512   150431/nginx: maste
 ```
 
 8. Открываем https://test.example.com/  браузер не ругается и проверяем корректность сертификата и его путь сертификации.
+![2](img_2.png)
 
 9. скрипт создан ранее
 
@@ -541,7 +543,7 @@ Jan 13 00:57:02 MyPC systemd[1]: Started A high performance web server and a rev
 ```
 
 Проверяем, что страничка открывается без ошибок и сертификат именно этот:
-КАРТИНКА !!!
+![3](img_4.png)
 
 
 11. Автозапуск vault. Возможно в продакшн-среде сервер vault должен всё-таки запускаться, останавливаться, а главное распечатываться только вручную, обдуманными действиями персонала, но мы на всякий случай предусмотрим автоматизацию на случай внезапной перезагрузки сервера. Для автоматического запуска vault воспользуемся systemd.
@@ -634,7 +636,7 @@ Jan 13 02:09:27 MyPC unseal_vault.sh[1453]: Cluster Name    vault-cluster-bbcc10
 Jan 13 02:09:27 MyPC unseal_vault.sh[1453]: Cluster ID      5618ba34-1e03-641d-9dca-fa292bf81084
 Jan 13 02:09:27 MyPC unseal_vault.sh[1453]: HA Enabled      false
 Jan 13 02:09:27 MyPC systemd[1]: Started "HashiCorp Vault - A tool for managing secrets".
-```
+
 
 root@MyPC:/home/user# vault status
 Key             Value
